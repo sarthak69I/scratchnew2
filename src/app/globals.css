@@ -1,0 +1,54 @@
+/* Minimal global reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  max-width: 100%;
+}
+
+html,
+body,
+#root {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #151E27;
+  color: #FFF;
+}
+
+body>main {
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+  color: #FFF;
+  cursor: pointer;
+}
+
+img,
+picture,
+canvas {
+  user-select: none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #151E27;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5BA4D7;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #50A7EA;
+}

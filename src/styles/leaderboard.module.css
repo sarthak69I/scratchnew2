@@ -1,0 +1,110 @@
+.bodyContent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 90px;
+}
+
+.leaderList {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.participantRow {
+  border: none;
+  border-bottom: 1px solid #212D3B;
+  outline: none;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  text-align: start;
+  gap: 10px;
+  background: transparent;
+  padding: 10px 15px;
+  transition: .2s;
+  cursor: pointer;
+}
+
+.participantRow:first-child {
+  border-top: 1px solid #212D3B;
+}
+
+.participantRow.me,
+.participantRow:hover {
+  background-color: #2F3841;
+}
+
+.eligibleWinnersHeading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #0bf20b;
+  padding: 10px 15px;
+}
+
+.eligibleWinnersHeading span {
+  font-weight: bold;
+}
+
+.rank {
+  width: 30px;
+  text-align: center;
+  color: #bbb;
+  font-weight: bold;
+}
+
+.participantPfp {
+  border-radius: 50%;
+}
+
+.participantName {
+  flex: 1;
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.voteCount {
+  color: #bbb;
+  font-size: 0.9rem;
+}
+
+.viewerFixed {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #222;
+  padding: 7px;
+  border-top: 1px solid #333;
+}
+
+.viewerFixed .participantRow {
+  background-color: #151E27;
+  border-radius: 5px;
+}
+
+.empty {
+  text-align: center;
+  color: #777;
+  padding: 20px;
+}
+
+.eligibleWinnersInfo {
+  display: flex;
+  align-items: flex-start;
+  margin: 0 15px 15px;
+  font-size: 1rem;
+  color: #777;
+  gap: 7px;
+}
+
+.eligibleWinnersInfo svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}

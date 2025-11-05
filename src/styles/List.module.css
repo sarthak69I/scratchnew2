@@ -1,0 +1,43 @@
+.listItem {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-left: 15px;
+    cursor: pointer;
+}
+
+.listItem:first-child {
+    margin-top: 10px;
+}
+
+.listItem .listRight {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 10px;
+}
+
+.listItem:not(:last-child) .listRight {
+    border-bottom: 1px solid #717171;
+}
+
+.listRight p:first-child {
+    font-size: 1.1rem;
+}
+
+.listRight p:last-child {
+    font-size: 0.9rem;
+    color: #9C9B9B;
+    margin-top: 3px;
+}
+
+.listRight .right {
+    padding-right: 15px;
+}
+
+.listRight svg {
+    color: #9C9B9B;
+    height: 18px;
+    width: 18px;
+}

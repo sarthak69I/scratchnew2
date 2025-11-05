@@ -1,0 +1,292 @@
+/* CONTAINER STYLING */
+
+.head {
+    padding: 40px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+.head>* {
+    text-align: center;
+}
+
+.head img.round {
+    border-radius: 50%;
+}
+
+.head>p {
+    color: #8D8D8D;
+}
+
+.container {
+    background-color: #212D3B;
+    transition: all 0.3s ease-in-out;
+}
+
+.container .heading {
+    padding: 15px 15px 0;
+    color: #5BA4D7;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.help {
+    font-size: 1rem;
+    color: #8D8D8D;
+    padding: 12px 20px 25px;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+
+/* REWARDS PANEL STYLING */
+
+.container .rewardsHeading {
+    padding-bottom: 5px;
+}
+
+.rewardsPanel .box:not(:last-child) {
+    border-bottom: 1px solid #000;
+}
+
+.rewardsPanel .boxHeading {
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.rewardsPanel .boxHeading svg {
+    transform-origin: center;
+    transform: rotate(-90deg);
+    transition: .2s;
+}
+
+.rewardsPanel .boxHeading.open svg {
+    transform: rotate(0deg);
+}
+
+.rewardRow {
+    padding-inline: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 15px;
+}
+
+.rewardIndex {
+    font-weight: bold;
+    width: 20px;
+    text-align: center;
+}
+
+
+/* BOX STYLING */
+
+.boxContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-inline: 10px;
+    gap: 10px;
+}
+
+.boxContainer .box {
+    flex-grow: 1;
+    text-align: center;
+    color: #FFF;
+    border: 2px solid #5BA4D7;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.boxContainer .box p:first-child {
+    background-color: #5BA4D7;
+    padding: 5px 10px;
+}
+
+.boxContainer .box p:last-child {
+    background-color: #212D3B;
+    padding: 10px;
+}
+
+
+/* LABEL STYLING */
+
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #212D3B;
+    margin-bottom: 15px;
+}
+
+.label .status {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.label .status span:first-child {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+}
+
+.label .status.green {
+    color: #3EE86D;
+    text-shadow: 0 0 1px #3EE86D;
+}
+
+.label .status.green span:first-child {
+    background-color: #3EE86D;
+    box-shadow: 0 0 4px #3EE86D;
+}
+
+.label .status.red {
+    color: #FF5353;
+    text-shadow: 0 0 1px #FF5353;
+}
+
+.label .status.red span:first-child {
+    background-color: #FF5353;
+    box-shadow: 0 0 4px #FF5353;
+}
+
+.label .status.gray {
+    color: #C9C9C9;
+    text-shadow: 0 0 1px #C9C9C9;
+}
+
+.label .status.gray span:first-child {
+    background-color: #C9C9C9;
+    box-shadow: 0 0 4px #C9C9C9;
+}
+
+
+/* BUTTON STYLING */
+
+.container.btn {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.container.btn + .container.btn {
+    margin-top: 10px;
+}
+
+.button {
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    color: #FFF;
+    background-color: #50A7EA;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.container .button:disabled {
+    background-color: #B0C2CF;
+}
+
+
+/* SPINNER STYLING */
+
+.spinner {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-top: 3px solid #FFF;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* TABS STYLING */
+
+.tabsWrapper {
+    padding: 10px 20px 15px;
+    border-bottom: 1px solid #000;
+    margin-bottom: 15px;
+}
+
+.tabs {
+    position: relative;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabOptions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tabOptions label {
+    padding: 7px 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.tabOptions input {
+    display: none;
+}
+
+.tabs .line {
+    position: absolute;
+    height: 3px;
+    border-radius: 10px;
+    background-color: #50A7EA;
+    transition: .2s;
+    bottom: 0;
+    left: 0;
+    width: 74px;
+}
+
+
+/* LINK STYLING */
+
+.linkContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px 20px;
+}
+
+.linkContainer .link {
+    outline: none;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: #50A7EA;
+    cursor: pointer;
+}
