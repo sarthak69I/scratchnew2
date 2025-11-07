@@ -1,7 +1,7 @@
 /* CONTAINER STYLING */
 
 .head {
-    padding: 40px 25px;
+    padding: 20px 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -18,61 +18,141 @@
 }
 
 .container {
-    background-color: #212D3B;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
     transition: all 0.3s ease-in-out;
 }
 
 .container .heading {
-    padding: 15px;
     color: #5BA4D7;
     font-size: 1rem;
     font-weight: 500;
+    margin-bottom: 10px;
 }
 
+/* PRIZE STYLING */
+.prizeContainer{
+    padding: 10px;
+}
+
+.prizeHeader{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.prizeHeader h4{
+    font-weight: 500;
+}
+
+.prizeHeader span{
+    color: #8D8D8D;
+}
+
+.sliderContainer{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.sliderInput{
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #4a4a4a;
+    outline: none;
+    border-radius: 5px;
+}
+
+.sliderInput::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #5BA4D7;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.sliderInput::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #5BA4D7;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.sliderSteps{
+    display: flex;
+    justify-content: space-between;
+    color: #8D8D8D;
+    font-size: 0.8rem;
+    padding-top: 5px;
+}
 
 /* CHAT STYLING */
+
+.chats{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
 .chat {
     display: grid;
     grid-template-columns: auto 1fr;
     align-items: center;
     gap: 10px;
-    padding-bottom: 8px;
-    margin-inline: 10px;
-}
-
-.chat:not(:last-child) {
-    border-bottom: 1px solid #444444;
-    margin-bottom: 8px;
 }
 
 .chat img {
     border-radius: 50%;
 }
 
+.chatInfo{
+    display: flex;
+    flex-direction: column;
+}
+
 .chat .title {
     font-size: 1.1rem;
+}
+
+.chat .subtitle{
+    color: #8D8D8D;
+    font-size: 0.9rem;
+}
+
+.addChat{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #5BA4D7;
+    cursor: pointer;
+}
+
+.addChat span:first-child{
+    font-size: 2rem;
+    font-weight: 300;
 }
 
 .help {
     font-size: 0.9rem;
     color: #8D8D8D;
-    padding: 15px 20px 17px;
+    padding-top: 10px;
 }
 
 
 /* INPUT STYLING */
 
-.container>label {
-    display: block;
-    padding-bottom: 10px;
+.inp {
+    margin-top: 10px;
 }
 
-.container .inp {
-    margin-inline: 15px;
-}
-
-.container input {
+.inp input {
     width: 100%;
     background: none;
     outline: none;
@@ -81,24 +161,10 @@
     color: #FFF;
     padding-bottom: 10px;
     border-bottom: 2px solid #5BA4D7;
-    margin-bottom: 10px;
 }
 
 
 /* SWITCH STYLING */
-
-.container .switchWrap {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 13px 15px;
-    cursor: pointer;
-}
-
-.container .switchWrap:hover {
-    background-color: #8585853B;
-}
 
 .switch {
     position: relative;
@@ -152,113 +218,32 @@
     border-color: #63A2D5;
 }
 
-.switch input:disabled+.slider {
-    background-color: #828385;
-}
-
-.switch input:disabled+.slider::before {
-    border-color: #828385;
-}
-
-
-/* DYNAMIC INPUT STYLING */
-
-.box {
-    padding: 15px 0px;
-    margin: 0 15px;
-    transition: all 0.3s ease-in-out;
-}
-
-.box:not(:last-child) {
-    border-bottom: 1px solid #000;
-}
-
-.boxHeading {
-    cursor: pointer;
-    font-weight: bold;
+.additionalPrizes {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    margin-right: 7px;
+    align-items: center;
 }
 
-.boxHeading.open {
-    margin-bottom: 8px;
-}
-
-.boxHeading svg {
-    transform-origin: center;
-    transform: rotate(-90deg);
-    transition: .2s;
-}
-
-.boxHeading.open svg {
-    transform: rotate(0deg);
-}
-
-.dInpWrapper {
+/* RADIO GROUP STYLING */
+.radioGroup{
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
 }
 
-.rewardRow {
+.radioLabel{
     display: flex;
     align-items: center;
-    gap: 8px;
-}
-
-.rewardIndex {
-    font-weight: bold;
-    width: 20px;
-    text-align: center;
-}
-
-.inputWrapper {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    flex: 1;
-    animation: fadeSlideIn 0.25s forwards;
-}
-
-.inputWrapper .input {
-    flex: 1;
-    min-width: 0;
-    padding: 6px 8px;
-    font-size: 1rem;
-    overflow-x: auto;
-    white-space: nowrap;
-}
-
-.removeBtn {
-    background: none;
-    border: none;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 10px;
     cursor: pointer;
-    color: #8D8D8D;
 }
 
-.removeBtn svg {
-    background: none;
-    fill: currentColor;
-    width: 20px;
-    height: 20px;
+.radioLabel input{
+    accent-color: #5BA4D7;
 }
 
-@keyframes fadeSlideIn {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.radioText p:first-child{
+    font-size: 1.1rem;
 }
 
 
@@ -268,7 +253,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 15px 15px;
+    margin-top: 10px;
 }
 
 .dateBox span {
@@ -282,7 +267,7 @@
 
 /* BUTTON STYLING */
 
-.container.btn {
+.btn {
     padding: 13px;
 }
 
@@ -303,7 +288,7 @@
     transition: 0.2s;
 }
 
-.container .button:disabled {
+.button:disabled {
     background-color: #2175B5;
 }
 
