@@ -14,11 +14,11 @@
 }
 
 .head>p {
-    color: #8D8D8D;
+    color: var(--secondary-text-color);
 }
 
 .container {
-    background-color: #1a1a1a;
+    background-color: var(--container-background);
     border-radius: 10px;
     margin: 10px;
     padding: 15px;
@@ -26,7 +26,7 @@
 }
 
 .container .heading {
-    color: #5BA4D7;
+    color: var(--accent-color);
     font-size: 1rem;
     font-weight: 500;
     margin-bottom: 10px;
@@ -49,7 +49,7 @@
 }
 
 .prizeHeader span{
-    color: #8D8D8D;
+    color: var(--secondary-text-color);
 }
 
 .sliderContainer{
@@ -72,7 +72,7 @@
     appearance: none;
     width: 20px;
     height: 20px;
-    background: #5BA4D7;
+    background: var(--accent-color);
     cursor: pointer;
     border-radius: 50%;
 }
@@ -80,7 +80,7 @@
 .sliderInput::-moz-range-thumb {
     width: 20px;
     height: 20px;
-    background: #5BA4D7;
+    background: var(--accent-color);
     cursor: pointer;
     border-radius: 50%;
 }
@@ -88,7 +88,7 @@
 .sliderSteps{
     display: flex;
     justify-content: space-between;
-    color: #8D8D8D;
+    color: var(--secondary-text-color);
     font-size: 0.8rem;
     padding-top: 5px;
 }
@@ -122,7 +122,7 @@
 }
 
 .chat .subtitle{
-    color: #8D8D8D;
+    color: var(--secondary-text-color);
     font-size: 0.9rem;
 }
 
@@ -130,7 +130,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    color: #5BA4D7;
+    color: var(--accent-color);
     cursor: pointer;
 }
 
@@ -141,7 +141,7 @@
 
 .help {
     font-size: 0.9rem;
-    color: #8D8D8D;
+    color: var(--secondary-text-color);
     padding-top: 10px;
 }
 
@@ -160,7 +160,7 @@
     font-size: 1.2rem;
     color: #FFF;
     padding-bottom: 10px;
-    border-bottom: 2px solid #5BA4D7;
+    border-bottom: 2px solid var(--accent-color);
 }
 
 
@@ -210,12 +210,12 @@
 }
 
 .switch input:checked+.slider {
-    background-color: #63A2D5;
+    background-color: var(--accent-color);
 }
 
 .switch input:checked+.slider::before {
     transform: translateX(15px);
-    border-color: #63A2D5;
+    border-color: var(--accent-color);
 }
 
 .additionalPrizes {
@@ -239,7 +239,7 @@
 }
 
 .radioLabel input{
-    accent-color: #5BA4D7;
+    accent-color: var(--accent-color);
 }
 
 .radioText p:first-child{
@@ -261,7 +261,7 @@
 }
 
 .dateBox .date {
-    color: #50A7EA;
+    color: var(--accent-color);
 }
 
 
@@ -283,13 +283,13 @@
     font-size: 1.1rem;
     border-radius: 10px;
     color: #FFF;
-    background-color: #50A7EA;
+    background-color: var(--button-color);
     cursor: pointer;
     transition: 0.2s;
 }
 
 .button:disabled {
-    background-color: #2175B5;
+    background-color: #2a5f8e;
 }
 
 
