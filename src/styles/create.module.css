@@ -1,4 +1,4 @@
-/* Telegram Giveaway Style – Complete CSS (No :root, No Global Selectors) */
+/* Telegram Giveaway Style – Enhanced CSS (No :root, No Global Selectors) */
 
 .pageContainer {
 background-color: #0e1621;
@@ -11,67 +11,63 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 box-sizing: border-box;
-animation: fadeInPage 0.8s ease-out;
-}
-
-@keyframes fadeInPage {
-0% { opacity: 0; transform: scale(0.95); }
-100% { opacity: 1; transform: scale(1); }
 }
 
 /* Card Wrapper */
 .card {
 background-color: #17212b;
 border-radius: 24px;
-box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-padding: 32px;
+box-shadow: 0 10px 35px rgba(0, 0, 0, 0.6);
+padding: 36px;
 width: 100%;
-max-width: 420px;
+max-width: 440px;
 text-align: center;
-border: 1px solid #1f2a37;
+border: 2px solid #1f2a37;
 transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-animation: cardSlideUp 0.6s ease-out 0.2s both;
-}
-
-@keyframes cardSlideUp {
-0% { opacity: 0; transform: translateY(30px); }
-100% { opacity: 1; transform: translateY(0); }
+animation: cardEntrance 0.8s ease-out;
 }
 
 .card:hover {
 background-color: #1c2733;
 transform: translateY(-5px) scale(1.02);
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+box-shadow: 0 15px 40px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes cardEntrance {
+0% {
+opacity: 0;
+transform: translateY(30px) scale(0.95);
+}
+100% {
+opacity: 1;
+transform: translateY(0) scale(1);
+}
 }
 
 /* Headings */
 .card h1 {
-font-size: 1.9rem;
+font-size: 2.1rem;
 font-weight: 800;
-margin-bottom: 16px;
+margin-bottom: 18px;
 color: #e9edf2;
-letter-spacing: 0.5px;
-animation: textGlow 2s ease-in-out infinite alternate;
-}
-
-@keyframes textGlow {
-0% { text-shadow: 0 0 5px rgba(42, 171, 238, 0.3); }
-100% { text-shadow: 0 0 15px rgba(42, 171, 238, 0.6); }
+letter-spacing: 0.8px;
+text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .card h2 {
-font-size: 1.3rem;
+font-size: 1.4rem;
 font-weight: 700;
-margin-bottom: 14px;
+margin-bottom: 16px;
 color: #b8c2cc;
+letter-spacing: 0.5px;
 }
 
 /* Paragraph / Text */
 .card p {
-font-size: 1rem;
+font-size: 1.05rem;
 line-height: 1.6;
 color: #a0adb7;
-margin-bottom: 24px;
+margin-bottom: 28px;
 font-weight: 600;
 }
 
@@ -79,27 +75,20 @@ font-weight: 600;
 .inputField {
 width: 100%;
 background-color: #0e1621;
-border: 1px solid #1f2a37;
+border: 2px solid #1f2a37;
 color: #e9edf2;
 border-radius: 16px;
-padding: 14px 16px;
-font-size: 1rem;
+padding: 14px 18px;
+font-size: 1.05rem;
 font-weight: 600;
 outline: none;
 transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-animation: inputPulse 3s infinite;
-}
-
-@keyframes inputPulse {
-0%, 100% { box-shadow: 0 0 0 rgba(42, 171, 238, 0); }
-50% { box-shadow: 0 0 0 2px rgba(42, 171, 238, 0.1); }
 }
 
 .inputField:focus {
 border-color: #2aabee;
-box-shadow: 0 0 0 3px rgba(42, 171, 238, 0.35);
+box-shadow: 0 0 0 4px rgba(42, 171, 238, 0.35);
 transform: scale(1.02);
-animation: none;
 }
 
 /* Buttons */
@@ -110,77 +99,100 @@ color: #fff;
 border: none;
 border-radius: 18px;
 padding: 16px;
-font-size: 1.05rem;
+font-size: 1.1rem;
 font-weight: 800;
 cursor: pointer;
-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-box-shadow: 0 4px 14px rgba(42, 171, 238, 0.35);
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+box-shadow: 0 6px 18px rgba(42, 171, 238, 0.4);
+letter-spacing: 0.5px;
 position: relative;
 overflow: hidden;
 }
 
-.primaryButton::before {
+.primaryButton::after {
 content: '';
 position: absolute;
-top: 0;
-left: -100%;
-width: 100%;
-height: 100%;
-background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-transition: left 0.5s;
+top: 50%;
+left: 50%;
+width: 0;
+height: 0;
+background: rgba(255, 255, 255, 0.2);
+border-radius: 50%;
+transition: all 0.5s ease;
+transform: translate(-50%, -50%);
 }
 
-.primaryButton:hover::before {
-left: 100%;
+.primaryButton:hover::after {
+width: 300px;
+height: 300px;
 }
 
 .primaryButton:hover {
 background-color: #229ed9;
 transform: translateY(-4px) scale(1.02);
-box-shadow: 0 8px 20px rgba(34, 158, 217, 0.5);
-border-radius: 20px;
+box-shadow: 0 10px 25px rgba(34, 158, 217, 0.5);
+}
+
+.primaryButton:active {
+transform: translateY(-1px) scale(1.01);
 }
 
 /* Secondary Button */
 .secondaryButton {
 width: 100%;
 background-color: transparent;
-border: 1px solid #2aabee;
+border: 2px solid #2aabee;
 color: #2aabee;
 border-radius: 18px;
 padding: 14px;
-font-size: 1rem;
+font-size: 1.05rem;
 font-weight: 700;
-margin-top: 10px;
+margin-top: 12px;
 cursor: pointer;
-transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+letter-spacing: 0.3px;
 position: relative;
 overflow: hidden;
+}
+
+.secondaryButton::before {
+content: '';
+position: absolute;
+top: 0;
+left: -100%;
+width: 100%;
+height: 100%;
+background: linear-gradient(90deg, transparent, rgba(42, 171, 238, 0.1), transparent);
+transition: left 0.5s ease;
+}
+
+.secondaryButton:hover::before {
+left: 100%;
 }
 
 .secondaryButton:hover {
 background-color: rgba(42, 171, 238, 0.15);
 color: #229ed9;
 border-color: #229ed9;
-transform: translateY(-2px) scale(1.02);
-box-shadow: 0 4px 12px rgba(34, 158, 217, 0.3);
-border-radius: 20px;
+transform: translateY(-2px);
+box-shadow: 0 6px 15px rgba(34, 158, 217, 0.2);
 }
 
 /* Divider */
 .divider {
-height: 1px;
-background-color: #1f2a37;
-margin: 24px 0;
+height: 2px;
+background: linear-gradient(90deg, transparent, #1f2a37, transparent);
+margin: 28px 0;
 width: 100%;
 border-radius: 2px;
 }
 
 /* Small Text */
 .smallText {
-font-size: 0.9rem;
+font-size: 0.95rem;
 color: #8b99a5;
 font-weight: 700;
+letter-spacing: 0.2px;
 }
 
 /* Checkbox / Toggle */
@@ -188,24 +200,27 @@ font-weight: 700;
 display: flex;
 align-items: center;
 justify-content: space-between;
-margin-top: 18px;
+margin-top: 22px;
+padding: 12px 0;
 }
 
 .toggle label {
-font-size: 1rem;
+font-size: 1.05rem;
 font-weight: 700;
 color: #cdd6df;
+letter-spacing: 0.3px;
 }
 
 .toggle input[type="checkbox"] {
-width: 50px;
-height: 26px;
+width: 52px;
+height: 28px;
 appearance: none;
 background-color: #1f2a37;
 border-radius: 50px;
 position: relative;
 cursor: pointer;
-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+border: 2px solid #2aabee;
 }
 
 .toggle input[type="checkbox"]::before {
@@ -213,21 +228,38 @@ content: "";
 position: absolute;
 width: 22px;
 height: 22px;
-background-color: #e9edf2;
+background: linear-gradient(145deg, #e9edf2, #d0dae6);
 border-radius: 50%;
-top: 2px;
+top: 1px;
 left: 2px;
-transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .toggle input[type="checkbox"]:checked {
 background-color: #2aabee;
-transform: scale(1.05);
+border-color: #229ed9;
 }
 
 .toggle input[type="checkbox"]:checked::before {
-transform: translateX(24px);
-background-color: #fff;
+transform: translateX(22px);
+background: linear-gradient(145deg, #ffffff, #e6f7ff);
 box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Add pulse animation for important elements */
+@keyframes pulseGlow {
+0% {
+box-shadow: 0 0 0 0 rgba(42, 171, 238, 0.4);
+}
+70% {
+box-shadow: 0 0 0 10px rgba(42, 171, 238, 0);
+}
+100% {
+box-shadow: 0 0 0 0 rgba(42, 171, 238, 0);
+}
+}
+
+.primaryButton {
+animation: pulseGlow 2s infinite;
 }
