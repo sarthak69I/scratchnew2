@@ -32,6 +32,12 @@
     margin-bottom: 10px;
 }
 
+.container .help {
+    font-size: 0.9rem;
+    color: var(--secondary-text-color);
+    padding-top: 10px;
+}
+
 /* PRIZE STYLING */
 .prizeContainer{
     padding: 10px;
@@ -138,13 +144,6 @@
     font-size: 2rem;
     font-weight: 300;
 }
-
-.help {
-    font-size: 0.9rem;
-    color: var(--secondary-text-color);
-    padding-top: 10px;
-}
-
 
 /* INPUT STYLING */
 
