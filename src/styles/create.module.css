@@ -1,15 +1,4 @@
-/* BASE COLORS – Telegram Dark Theme */
-:root {
-    --bg-dark: #0E1621;
-    --bg-card: #17212B;
-    --bg-hover: #1C2733;
-    --border: #1F2A37;
-    --text-primary: #E9EDF2;
-    --text-secondary: #8B99A5;
-    --accent: #2AABEE;
-    --accent-dark: #229ED9;
-    --shadow: rgba(0, 0, 0, 0.4);
-}
+
 
 /* GENERAL LAYOUT */
 body {
