@@ -1,3 +1,13 @@
+
+:root {
+  --background-color: #17212b;
+  --text-color: #ffffff;
+  --accent-color: #3390ec;
+  --secondary-text-color: #aaaaaa;
+  --container-background: #202b36;
+  --button-color: #3390ec;
+}
+
 /* Minimal global reset */
 * {
   margin: 0;
@@ -15,8 +25,8 @@ body,
 }
 
 body {
-  background-color: #151E27;
-  color: #FFF;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 body>main {
@@ -25,7 +35,7 @@ body>main {
 
 a {
   text-decoration: none;
-  color: #FFF;
+  color: var(--accent-color);
   cursor: pointer;
 }
 
@@ -41,14 +51,14 @@ canvas {
 }
 
 ::-webkit-scrollbar-track {
-  background: #151E27;
+  background: var(--background-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #5BA4D7;
+  background: var(--accent-color);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #50A7EA;
+  background: #50A7EA; /* Lighter accent on hover */
 }
