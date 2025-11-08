@@ -1,319 +1,178 @@
-/* GENERAL LAYOUT */
-body {
-    background-color: #0E1621;
-    font-family: "Inter", "Segoe UI", Arial, sans-serif;
-    color: #E9EDF2;
-    transition: background 0.3s ease-in-out;
+/* Telegram Giveaway Style – Complete CSS (No :root, No Global Selectors) */
+
+.pageContainer {
+  background-color: #0e1621;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  color: #e9edf2;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
 }
 
-/* HEADER */
-.head {
-    padding: 40px 25px 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    background-color: #17212B;
-    border-bottom: 1px solid #1F2A37;
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease-in-out;
+/* Card Wrapper */
+.card {
+  background-color: #17212b;
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  padding: 32px;
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  border: 1px solid #1f2a37;
+  transition: all 0.3s ease;
 }
 
-.head > * {
-    text-align: center;
+.card:hover {
+  background-color: #1c2733;
+  transform: translateY(-2px);
 }
 
-.head > p {
-    color: #8B99A5;
-    font-size: 0.95rem;
+/* Headings */
+.card h1 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  color: #e9edf2;
+  letter-spacing: 0.5px;
 }
 
-/* CONTAINER */
-.container {
-    background-color: #17212B;
-    margin: 20px;
-    border-radius: 16px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s ease-in-out;
+.card h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #b8c2cc;
 }
 
-.container .heading {
-    padding: 18px 20px;
-    color: #2AABEE;
-    font-size: 1rem;
-    font-weight: 600;
-    border-bottom: 1px solid #1F2A37;
+/* Paragraph / Text */
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #a0adb7;
+  margin-bottom: 24px;
 }
 
-/* CHAT SECTION */
-.chat {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    align-items: center;
-    gap: 12px;
-    padding: 12px 15px;
-    border-bottom: 1px solid #1F2A37;
-    transition: background 0.3s;
+/* Input Fields */
+.inputField {
+  width: 100%;
+  background-color: #0e1621;
+  border: 1px solid #1f2a37;
+  color: #e9edf2;
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  font-weight: 500;
+  outline: none;
+  transition: all 0.2s ease;
 }
 
-.chat:hover {
-    background-color: #1C2733;
+.inputField:focus {
+  border-color: #2aabee;
+  box-shadow: 0 0 0 3px rgba(42, 171, 238, 0.25);
 }
 
-.chat img {
-    border-radius: 50%;
-    width: 42px;
-    height: 42px;
+/* Buttons */
+.primaryButton {
+  width: 100%;
+  background-color: #2aabee;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 14px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(42, 171, 238, 0.35);
 }
 
-.chat .title {
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: #E9EDF2;
+.primaryButton:hover {
+  background-color: #229ed9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(34, 158, 217, 0.45);
 }
 
-.help {
-    font-size: 0.9rem;
-    color: #8B99A5;
-    padding: 15px 20px 17px;
+/* Secondary Button */
+.secondaryButton {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #2aabee;
+  color: #2aabee;
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.25s ease;
 }
 
-/* INPUTS */
-.container > label {
-    display: block;
-    padding-bottom: 10px;
-    font-weight: 500;
-    color: #8B99A5;
+.secondaryButton:hover {
+  background-color: rgba(42, 171, 238, 0.1);
+  color: #229ed9;
+  border-color: #229ed9;
 }
 
-.container .inp {
-    margin-inline: 15px;
+/* Divider */
+.divider {
+  height: 1px;
+  background-color: #1f2a37;
+  margin: 24px 0;
+  width: 100%;
 }
 
-.container input {
-    width: 100%;
-    background: none;
-    outline: none;
-    border: none;
-    font-size: 1.05rem;
-    color: #E9EDF2;
-    padding: 10px 0;
-    border-bottom: 2px solid #229ED9;
-    margin-bottom: 15px;
-    transition: border-color 0.3s;
+/* Small Text */
+.smallText {
+  font-size: 0.9rem;
+  color: #8b99a5;
+  font-weight: 500;
 }
 
-.container input:focus {
-    border-color: #2AABEE;
+/* Checkbox / Toggle */
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18px;
 }
 
-/* SWITCH STYLING */
-.container .switchWrap {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 18px;
-    cursor: pointer;
-    transition: background 0.3s;
+.toggle label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #cdd6df;
 }
 
-.container .switchWrap:hover {
-    background-color: #1C2733;
+.toggle input[type="checkbox"] {
+  width: 46px;
+  height: 24px;
+  appearance: none;
+  background-color: #1f2a37;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.switch {
-    position: relative;
-    display: inline-block;
-    width: 44px;
-    height: 22px;
+.toggle input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #e9edf2;
+  border-radius: 50%;
+  top: 2px;
+  left: 3px;
+  transition: all 0.3s ease;
 }
 
-.switch .slider {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #5E6C77;
-    transition: .4s;
-    border-radius: 34px;
+.toggle input[type="checkbox"]:checked {
+  background-color: #2aabee;
 }
 
-.switch input {
-    display: none;
-}
-
-.slider::before {
-    position: absolute;
-    content: "";
-    height: 22px;
-    width: 22px;
-    left: -2px;
-    top: -1px;
-    background-color: #17212B;
-    border: 3px solid #5E6C77;
-    transition: .2s;
-    border-radius: 50px;
-}
-
-.switch input:checked + .slider {
-    background-color: #2AABEE;
-}
-
-.switch input:checked + .slider::before {
-    transform: translateX(20px);
-    border-color: #2AABEE;
-}
-
-/* DYNAMIC INPUT SECTIONS */
-.box {
-    padding: 15px 0px;
-    margin: 0 15px;
-    transition: all 0.3s ease-in-out;
-    border-bottom: 1px solid #1F2A37;
-}
-
-.boxHeading {
-    cursor: pointer;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #E9EDF2;
-}
-
-.boxHeading svg {
-    transform-origin: center;
-    transform: rotate(-90deg);
-    transition: .2s;
-    fill: #8B99A5;
-}
-
-.boxHeading.open svg {
-    transform: rotate(0deg);
-}
-
-.dInpWrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.rewardRow {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.rewardIndex {
-    font-weight: bold;
-    width: 20px;
-    text-align: center;
-    color: #8B99A5;
-}
-
-.inputWrapper {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    flex: 1;
-    animation: fadeSlideIn 0.25s forwards;
-}
-
-.inputWrapper .input {
-    flex: 1;
-    padding: 8px 10px;
-    font-size: 1rem;
-    background-color: #1C2733;
-    border-radius: 10px;
-    color: #E9EDF2;
-    border: 1px solid #1F2A37;
-}
-
-.removeBtn {
-    background: none;
-    border: none;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: #8B99A5;
-    transition: color 0.2s;
-}
-
-.removeBtn:hover {
-    color: #2AABEE;
-}
-
-/* DATE BOX */
-.dateBox {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px 15px;
-}
-
-.dateBox span {
-    font-size: 1rem;
-    color: #8B99A5;
-}
-
-.dateBox .date {
-    color: #2AABEE;
-    font-weight: 500;
-}
-
-/* BUTTONS */
-.container.btn {
-    padding: 18px;
-}
-
-.button {
-    border: none;
-    outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 52px;
-    font-size: 1.1rem;
-    border-radius: 12px;
-    color: #FFF;
-    background: linear-gradient(135deg, #2AABEE, #229ED9);
-    cursor: pointer;
-    transition: all 0.2s;
-    box-shadow: 0 3px 10px rgba(42, 171, 238, 0.3);
-}
-
-.button:hover {
-    background: linear-gradient(135deg, #33B8F3, #1E8ED5);
-}
-
-.container .button:disabled {
-    background: #1E3A55;
-    color: #9BBBD4;
-}
-
-/* SPINNER */
-.spinner {
-    border: 3px solid rgba(255, 255, 255, 0.2);
-    border-top: 3px solid #2AABEE;
-    border-radius: 50%;
-    width: 22px;
-    height: 22px;
-    animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* ANIMATIONS */
-@keyframes fadeSlideIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+.toggle input[type="checkbox"]:checked::before {
+  transform: translateX(22px);
+  background-color: #fff;
 }
