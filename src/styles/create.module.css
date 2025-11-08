@@ -1,4 +1,4 @@
-/* Telegram Giveaway Style – Complete CSS (No :root, No Global Selectors) */
+/* Telegram Giveaway Style – Complete CSS (Updated from Screenshot) */
 
 .pageContainer {
   background-color: #0e1621;
@@ -16,12 +16,12 @@
 /* Card Wrapper */
 .card {
   background-color: #17212b;
-  border-radius: 18px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
-  padding: 32px;
+  border-radius: 16px; /* Slightly smaller radius for sleeker look */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6); /* Darker, more defined shadow */
+  padding: 28px; /* Reduced padding for compact layout */
   width: 100%;
-  max-width: 420px;
-  text-align: center;
+  max-width: 440px; /* Slightly wider for content */
+  text-align: left; /* Align content like screenshot */
   border: 1px solid #1f2a37;
   transition: all 0.3s ease;
 }
@@ -33,26 +33,26 @@
 
 /* Headings */
 .card h1 {
-  font-size: 1.9rem;
+  font-size: 1.85rem; /* Slightly smaller for visual balance */
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   color: #e9edf2;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px; /* Tighter spacing */
 }
 
 .card h2 {
-  font-size: 1.3rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   color: #b8c2cc;
 }
 
 /* Paragraph / Text */
 .card p {
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 0.95rem;
+  line-height: 1.5;
   color: #a0adb7;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 /* Input Fields */
@@ -61,8 +61,8 @@
   background-color: #0e1621;
   border: 1px solid #1f2a37;
   color: #e9edf2;
-  border-radius: 10px;
-  padding: 12px 14px;
+  border-radius: 8px; /* Slightly smaller radius */
+  padding: 10px 14px;
   font-size: 1rem;
   font-weight: 500;
   outline: none;
@@ -71,7 +71,7 @@
 
 .inputField:focus {
   border-color: #2aabee;
-  box-shadow: 0 0 0 3px rgba(42, 171, 238, 0.25);
+  box-shadow: 0 0 0 2px rgba(42, 171, 238, 0.25); /* Slightly smaller glow */
 }
 
 /* Buttons */
@@ -80,19 +80,19 @@
   background-color: #2aabee;
   color: #fff;
   border: none;
-  border-radius: 12px;
-  padding: 14px;
-  font-size: 1.05rem;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1rem;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: 0 4px 14px rgba(42, 171, 238, 0.35);
+  box-shadow: 0 3px 12px rgba(42, 171, 238, 0.35);
 }
 
 .primaryButton:hover {
   background-color: #229ed9;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 18px rgba(34, 158, 217, 0.45);
+  transform: translateY(-1.5px);
+  box-shadow: 0 5px 16px rgba(34, 158, 217, 0.45);
 }
 
 /* Secondary Button */
@@ -101,17 +101,17 @@
   background-color: transparent;
   border: 1px solid #2aabee;
   color: #2aabee;
-  border-radius: 12px;
-  padding: 12px;
-  font-size: 1rem;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 0.95rem;
   font-weight: 600;
-  margin-top: 10px;
+  margin-top: 8px;
   cursor: pointer;
   transition: all 0.25s ease;
 }
 
 .secondaryButton:hover {
-  background-color: rgba(42, 171, 238, 0.1);
+  background-color: rgba(42, 171, 238, 0.08);
   color: #229ed9;
   border-color: #229ed9;
 }
@@ -120,13 +120,13 @@
 .divider {
   height: 1px;
   background-color: #1f2a37;
-  margin: 24px 0;
+  margin: 20px 0;
   width: 100%;
 }
 
 /* Small Text */
 .smallText {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: #8b99a5;
   font-weight: 500;
 }
@@ -136,18 +136,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 18px;
+  margin-top: 16px;
 }
 
 .toggle label {
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: #cdd6df;
 }
 
 .toggle input[type="checkbox"] {
-  width: 46px;
-  height: 24px;
+  width: 42px;
+  height: 22px;
   appearance: none;
   background-color: #1f2a37;
   border-radius: 50px;
@@ -159,12 +159,12 @@
 .toggle input[type="checkbox"]::before {
   content: "";
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 18px;
+  height: 18px;
   background-color: #e9edf2;
   border-radius: 50%;
   top: 2px;
-  left: 3px;
+  left: 2px;
   transition: all 0.3s ease;
 }
 
@@ -173,6 +173,6 @@
 }
 
 .toggle input[type="checkbox"]:checked::before {
-  transform: translateX(22px);
+  transform: translateX(20px);
   background-color: #fff;
 }
